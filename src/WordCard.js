@@ -33,8 +33,7 @@ export default function WordCard(props){
         })
     },[])
 
-    const activationHandler = (c) => {
-        console.log('${c} has been activated.')
+    const activationHandler = c => { console.log(`${c} has been activated.`) 
         let guess = state.guess + c
         setState({ ...state, guess })
         if (guess.length == state.word.length) {
@@ -57,7 +56,6 @@ attempt = {state.attempt}/>)}
  </div>
 );
 }
-
 
 
 
